@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div style="visibility:hidden" class="app" id="root">
+    <div class="app" id="root">
         <div class="default-form">
-            <form>
+            <form onsubmit="controller.addUser(event)">
                 <div class="form-group">
                     <label for="name">Nome</label>
-                    <input id="name" name="nome" type="text" />
+                    <input id="name" name="nome" type="text" placeholder="Nome completo (sem abreviações)" />
                 </div>
                 <div class="form-group">
                     <label for="cpf">CPF</label>
@@ -30,7 +30,7 @@
                 
                 <div class="form-group"> 
                     <button class="btn btn-default">Cadastrar</button>
-                </form>
+                </div>
             </form>
         </div>
 
@@ -51,8 +51,33 @@
             </ul>
         </div>
         
-    </div> 
+    </div>
+    <script type="text/javascript" src="js/controllers/MainController.js"></script>
     <script type="text/javascript" src="js/models/User.js"></script>
+    <script type="text/javascript" src="js/models/UsersList.js"></script>
     <script type="text/javascript" src="js/services/UsersService.js"></script>
+
+    <script type="text/javascript">
+        let controller = new MainController();
+    //     let $ = document.querySelector.bind(document);
+    //     let user = new User(
+    //         $('#name').value,
+    //         $('#cpf').value,
+    //         $('#phone').value,
+    //         $('#email').value            
+    //     );
+    //     let user2 = new User(
+    //         'James Bond',
+    //         $('#cpf').value,
+    //         $('#phone').value,
+    //         $('#email').value            
+    //     );
+
+    //     let lista = new UsersList();
+    //     lista.addUser(user);
+    //     lista.addUser(user2);
+    //     console.log(lista.users);
+    // </script>
+
 </body>
 </html>

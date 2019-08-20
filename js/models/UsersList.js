@@ -7,8 +7,13 @@ class UsersList{
         return [].concat(this._usersList);
     }
 
-    addUser(user){
+    saveUser(user){
         this._usersList.push(user);
+        // this._persistUserData();
+    }
+
+    _persistUserData(){
+        localStorage.setItem('AppUsers', JSON.stringify(this._usersList));
     }
 
 }

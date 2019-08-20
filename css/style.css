@@ -1,20 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap");
-h1, h2, h3, h4, span, p, a {
+h1, h2, h3, h4, span, p, a, label {
   font-family: "Roboto", sans-serif;
 }
 
 .app {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 100px auto;
-  width: 40%;
-  border: 1px solid;
+  width: 30%;
+  border: 1px solid #333333;
   padding: 15px;
+}
+
+.default-form {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.default-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.default-form .form-group label {
+  font-size: 0.9em;
+}
+.default-form .form-group input {
+  outline: none;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  font-size: 1.5em;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.default-form .form-group input::placeholder {
+  color: #CCCCCC;
 }
 
 .list-component {
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 100px auto;
 }
 .list-component ul {

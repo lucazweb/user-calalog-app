@@ -5,17 +5,23 @@ class MainController{
         this._inputCpf = $('#cpf');
         this._inputPhone = $('#phone');
         this._inputEmail = $('#email');
+
+        this._usersList = new UsersList();
     }
 
-    addUser(){
-        let user = new User(
+    addUser(event){
+        event.preventDefault();
+        this._usersList.saveUser(this._createUser());
+        console.log(this._usersList.users);
+    }
+
+    _createUser(){
+        return new User(
             this._inputName,
             this._inputCpf,
             this._inputPhone,
             this._inputEmail
         );
-
-        console.log('novo usuário criado ', user );
     }
 
 }

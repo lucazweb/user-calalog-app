@@ -1,23 +1,59 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
 
 $cor-borda-default: #333333;
+$cor-placeholder-default: #CCCCCC;  
 
-h1, h2, h3, h4, span, p, a{
+h1, h2, h3, h4, span, p, a, label{
     font-family: 'Roboto', sans-serif;
 }
 
 .app{
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 100px auto;
-    width: 40%;
-    border: 1px solid;
+    width: 30%;
+    border: 1px solid $cor-borda-default;
     padding: 15px;
 }
 
+//FORMS
+
+.default-form{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+
+        label{
+            font-size: 0.9em;
+        }
+
+        input{
+            outline: none;
+            border-right: none;
+            border-left: none;
+            border-top: none;
+            font-size: 1.5em;
+            font-weight: normal;
+            padding-bottom: 10px;
+            &::placeholder{
+                color: $cor-placeholder-default;
+            }
+        }
+    }
+}
+
+
+//LIST COMPONENT
 .list-component{
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin: 100px auto;
     ul{
         display:flex;
