@@ -5,8 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OSF Global App</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="app" id="root">
+        <div class="default-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input id="name" name="nome" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" name="cpf" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="phone">E-mail</label>
+                    <input id="email" name="email" type="email" />
+                </div>
+                
+                <div class="form-group"> 
+                    <button class="btn btn-default">Cadastrar</button>
+                </form>
+            </form>
+        </div>
+
+        <div class="list-component">
+            <ul>
+                <li>
+                    <span>Nome do usuário</span>
+                    <span>CPF</span>
+                    <span>(011) 999.99999</span>
+                    <span>nome.user@gmail.com</span>
+                </li>
+                <li>
+                    <span>Nome do usuário</span>
+                    <span>CPF</span>
+                    <span>(011) 999.99999</span>
+                    <span>nome.user@gmail.com</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div> 
 </body>
 </html>
