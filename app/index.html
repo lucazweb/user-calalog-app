@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OSF Global App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app" id="root">
+        <!-- <div class="default-form">
+            <form onsubmit="controller.addUser(event)">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input id="name" name="nome" type="text" placeholder="Nome completo (sem abreviações)" />
+                    <small>O campo deve conter 3 caracteres ou mais</small>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" name="cpf" type="text" placeholder="CPF" />
+                    <small>O campo deve conter 3 caracteres ou mais</small>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="text" placeholder="Telefone com DDD" />
+                </div>
+                <div class="form-group">
+                    <label for="phone">E-mail</label>
+                    <input id="email" name="email" type="email" placeholder="E-mail" />
+                </div>
+                
+                <div class="form-group"> 
+                    <button class="btn btn-default">Cadastrar</button>
+                </div>
+            </form>
+        </div> -->
+
+        <!-- <div id="usersList" class="list-component">
+            <ul>
+                <li>
+                    <span>Nome do usuário</span>
+                    <span>CPF</span>
+                    <span>(011) 999.99999</span>
+                    <span>nome.user@gmail.com</span>
+                </li>
+                <li>
+                    <span>Nome do usuário</span>
+                    <span>CPF</span>
+                    <span>(011) 999.99999</span>
+                    <span>nome.user@gmail.com</span>
+                </li>
+            </ul>
+        </div> -->
+        
+    </div>
+    <script type="text/javascript" src="js/controllers/MainController.js"></script>
+    <script src="js/views/View.js"></script>
+    <script type="text/javascript" src="js/models/User.js"></script>
+    <script type="text/javascript" src="js/models/UsersList.js"></script>
+    <script type="text/javascript" src="js/services/UsersService.js"></script>
+    <script type="text/javascript" src="js/views/UsersListView.js"></script>
+    <script type="text/javascript" src="js/views/FormView.js"></script>
+    <script type="text/javascript" src="js/helpers/CPFHelper.js"></script>
+
+    <script type="text/javascript">
+        let controller = new MainController();
+        let pathname = window.location.pathname;
+        controller.handleRoutes(pathname);
+        
+    </script>
+
+</body>
+</html>
