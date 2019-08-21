@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap");
-h1, h2, h3, h4, span, p, a, label {
+h1, h2, h3, h4, span, p, a, label, small {
   font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  background: #f3f3f3;
 }
 
 .app {
@@ -9,8 +13,9 @@ h1, h2, h3, h4, span, p, a, label {
   align-items: center;
   margin: 100px auto;
   width: 30%;
-  border: 1px solid #333333;
+  border: 1px solid #efeeed;
   padding: 15px;
+  background: #FFFFFF;
 }
 
 .default-form {
@@ -26,6 +31,7 @@ h1, h2, h3, h4, span, p, a, label {
 }
 .default-form .form-group label {
   font-size: 0.9em;
+  visibility: hidden;
 }
 .default-form .form-group input {
   outline: none;
@@ -37,7 +43,33 @@ h1, h2, h3, h4, span, p, a, label {
   padding-bottom: 10px;
 }
 .default-form .form-group input::placeholder {
-  color: #CCCCCC;
+  color: #efeeed;
+}
+.default-form .form-group input:focus {
+  color: #333333;
+}
+.default-form .form-group input:focus::placeholder {
+  color: #333333;
+}
+.default-form .form-group small {
+  color: #990000;
+  margin-top: 5px;
+}
+.default-form .form-group button {
+  cursor: pointer;
+  border-radius: 25px;
+  height: 50px;
+  background-color: #00c8b3;
+  color: #FFFFFF;
+  border: none;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity ease 0.5s;
+}
+.default-form .form-group button:hover {
+  opacity: 0.7;
 }
 
 .list-component {
@@ -56,7 +88,7 @@ h1, h2, h3, h4, span, p, a, label {
 .list-component ul li {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #efeeed;
   padding-top: 10px;
   padding-bottom: 10px;
 }

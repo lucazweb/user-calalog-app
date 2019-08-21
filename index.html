@@ -14,18 +14,20 @@
                 <div class="form-group">
                     <label for="name">Nome</label>
                     <input id="name" name="nome" type="text" placeholder="Nome completo (sem abreviações)" />
+                    <small>O campo deve conter 3 caracteres ou mais</small>
                 </div>
                 <div class="form-group">
                     <label for="cpf">CPF</label>
-                    <input id="cpf" name="cpf" type="text" />
+                    <input id="cpf" name="cpf" type="text" placeholder="CPF" />
+                    <small>O campo deve conter 3 caracteres ou mais</small>
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input id="phone" name="phone" type="text" />
+                    <input id="phone" name="phone" type="text" placeholder="Telefone com DDD" />
                 </div>
                 <div class="form-group">
                     <label for="phone">E-mail</label>
-                    <input id="email" name="email" type="email" />
+                    <input id="email" name="email" type="email" placeholder="E-mail" />
                 </div>
                 
                 <div class="form-group"> 
@@ -34,8 +36,8 @@
             </form>
         </div>
 
-        <div class="list-component">
-            <ul>
+        <div id="usersList" class="list-component">
+            <!-- <ul>
                 <li>
                     <span>Nome do usuário</span>
                     <span>CPF</span>
@@ -48,7 +50,7 @@
                     <span>(011) 999.99999</span>
                     <span>nome.user@gmail.com</span>
                 </li>
-            </ul>
+            </ul> -->
         </div>
         
     </div>
@@ -56,28 +58,12 @@
     <script type="text/javascript" src="js/models/User.js"></script>
     <script type="text/javascript" src="js/models/UsersList.js"></script>
     <script type="text/javascript" src="js/services/UsersService.js"></script>
+    <script type="text/javascript" src="js/views/UsersListView.js"></script>
+    <script type="text/javascript" src="js/helpers/CPFHelper.js"></script>
 
     <script type="text/javascript">
         let controller = new MainController();
-    //     let $ = document.querySelector.bind(document);
-    //     let user = new User(
-    //         $('#name').value,
-    //         $('#cpf').value,
-    //         $('#phone').value,
-    //         $('#email').value            
-    //     );
-    //     let user2 = new User(
-    //         'James Bond',
-    //         $('#cpf').value,
-    //         $('#phone').value,
-    //         $('#email').value            
-    //     );
-
-    //     let lista = new UsersList();
-    //     lista.addUser(user);
-    //     lista.addUser(user2);
-    //     console.log(lista.users);
-    // </script>
+    </script>
 
 </body>
 </html>
