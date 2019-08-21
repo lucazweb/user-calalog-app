@@ -3,7 +3,7 @@
 $cor-app-background: #f3f3f3;
 $cor-borda-default: #efeeed;
 $cor-placeholder-default: #efeeed;
-$cor-erro: #eb4a46.;
+$cor-erro: #eb4a46;
 $cor-botao-ativo:  #00c8b3;
 $cor-input-ativo: #333333;
 $background-botao-disabled: #f6f6f6;
@@ -22,6 +22,7 @@ html, body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     margin: 100px auto;
     width: 30%;
     border: 1px solid $cor-borda-default;
@@ -77,6 +78,7 @@ html, body{
             cursor: pointer;
             border-radius: 25px;
             height: 50px;
+            margin-top: 20px;
             background-color: $cor-botao-ativo;
             color: $cor-branca;
             border: none;
@@ -99,7 +101,7 @@ html, body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 100px auto;
+    margin:auto;
     ul{
         display:flex;
         flex-direction: column;

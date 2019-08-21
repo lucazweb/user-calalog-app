@@ -11,6 +11,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   margin: 100px auto;
   width: 30%;
   border: 1px solid #efeeed;
@@ -33,6 +34,9 @@ html, body {
   font-size: 0.9em;
   visibility: hidden;
 }
+.default-form .form-group input.invalid {
+  border-color: #eb4a46 !important;
+}
 .default-form .form-group input {
   outline: none;
   border-right: none;
@@ -52,13 +56,14 @@ html, body {
   color: #333333;
 }
 .default-form .form-group small {
-  color: #990000;
+  color: #eb4a46;
   margin-top: 5px;
 }
 .default-form .form-group button {
   cursor: pointer;
   border-radius: 25px;
   height: 50px;
+  margin-top: 20px;
   background-color: #00c8b3;
   color: #FFFFFF;
   border: none;
@@ -76,7 +81,7 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 100px auto;
+  margin: auto;
 }
 .list-component ul {
   display: flex;

@@ -1,8 +1,10 @@
 class MainController{
     constructor(){
         let $ = document.querySelector.bind(document);
-        this._usersList = new UsersList();
         this._formView = new FormView($('#root'));
+        this._usersList = new UsersList();
+        this._usersService = new UsersService('https://private-21e8de-rafaellucio.apiary-mock.com/users');
+        this._usersService.getUsers(err => console.log(err), res => this._usersList.saveUsers(res));
         this._usersListView = new UsersListView($('#root'));
         this._usersListView.update(this._usersList);
     }
@@ -52,6 +54,7 @@ class MainController{
                 this._initFormElements();
                 return 'Home view';
             case '/list':
+                console.log(this._usersList);
                 this._usersListView.update(this._usersList);
                 return 'List view'
             default:

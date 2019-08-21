@@ -11,7 +11,5 @@ class UsersService{
             .catch(err => error(err))
     }
 
-    get baseurl(){
-        return this._baseUrl;
-    }
+    
 }
