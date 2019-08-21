@@ -125,3 +125,9 @@ html, body{
         }
     }
 }
+
+// @@@@@@@ TEMP @@@@@@@
+input.invalid{
+    outline: none;
+    border-color: $cor-erro !important;
+}

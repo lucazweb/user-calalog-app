@@ -33,4 +33,10 @@ class FormView extends View {
             </div>      
         `
     }
+
+    update(model){
+        this._element.innerHTML = this.template(model);
+        // 1. create custom inputs,
+        // 2. pass to template
+    }
 }
