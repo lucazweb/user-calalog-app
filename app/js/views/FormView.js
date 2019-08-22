@@ -1,5 +1,9 @@
 class FormView extends View {
 
+    constructor(element){
+        super(element);
+    }
+
     template(model){
         return `
             <div class="default-form">
@@ -10,11 +14,7 @@ class FormView extends View {
                         <input id="name" name="nome" autocomplete="off" type="text" placeholder="Nome completo (sem abreviações)" />
                         <small>O campo deve conter 3 caracteres ou mais</small>
                     </div>
-                    <div class="form-group">
-                        <label for="cpf">CPF</label>
-                        <input id="cpf" class="invalid" name="cpf" autocomplete="off" type="text" placeholder="CPF" />
-                        <small>Digite um CPF válido</small>
-                    </div>
+                    <div id="cpfInputComponent" class="form-group"></div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
                         <input id="phone" name="phone" autocomplete="off" type="text" placeholder="Telefone com DDD" />
@@ -35,8 +35,10 @@ class FormView extends View {
     }
 
     update(model){
-        this._element.innerHTML = this.template(model);
-        // 1. create custom inputs,
-        // 2. pass to template
+        this._element.innerHTML = this.template(model);       
+        
+        let inputCpf = new InputCPFComponent('cpf', 'cpf', 'text', 'cpfInputComponent', 'form-group', 'CPF');
+        
+        inputCpf.append();
     }
 }
