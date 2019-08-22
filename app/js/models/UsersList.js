@@ -30,14 +30,6 @@ class UsersList{
         this._persistListData();
     }
 
-    clearList(){
-        console.log('lista vazia');
-    }
-
-    removeListItem(){
-        console.log('removendo user da lista');
-    }
-
     _persistListData(){
         localStorage.setItem('usersList', JSON.stringify(this._usersList));
     }

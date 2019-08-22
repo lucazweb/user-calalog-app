@@ -59,12 +59,6 @@ class MainController{
     }
 
     handleRoutes(path){
-        //console.log(path);
-        
-        let routes = {
-            '/': 'home',
-            '/list': 'list'
-        };
 
         switch(path){
             case '/':
