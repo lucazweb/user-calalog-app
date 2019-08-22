@@ -7,7 +7,7 @@ class FormView extends View {
     template(model){
         return `
             <div class="default-form">
-                <h2> Cadastro </h2>
+                <h2 class="title-default"> Cadastro </h2>
                 <form onsubmit="controller.addUser(event)">
                     <div id="nameInput" class="form-group"></div>
                     <div id="cpfInput" class="form-group"></div>

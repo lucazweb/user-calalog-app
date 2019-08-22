@@ -1,6 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+/** BREAKPOINTS */
 h1, h2, h3, h4, span, p, a, label, small {
   font-family: "Roboto", sans-serif;
+}
+
+.app-title {
+  text-align: center;
+  margin-top: 60px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.title-default {
+  font-size: 1.1em;
+  border-bottom: 1px solid #333;
+  margin: 0 0 30px 0;
+  padding-top: 0;
+  padding-bottom: 4px;
 }
 
 html, body {
@@ -12,11 +28,17 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin: 100px auto;
+  margin: 20px auto 20px auto;
   width: 30%;
   border: 1px solid #efeeed;
-  padding: 15px;
+  border-radius: 6px;
+  padding: 25px;
   background: #FFFFFF;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+  .app {
+    width: 70%;
+  }
 }
 
 .default-form {
@@ -127,6 +149,41 @@ button.btn:hover {
   height: 40px;
   color: #FFFFFF;
   font-family: "Roboto", sans-serif;
+}
+
+.app-nav {
+  width: 450px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app-nav .btn.active {
+  opacity: 1;
+}
+.app-nav .btn {
+  cursor: pointer;
+  width: 50%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0.8;
+  color: white;
+  background: #069;
+  border: 1px solid transparent;
+  font-size: 1.1em;
+  font-family: "Roboto", sans-serif;
+}
+.app-nav .btn:first-child {
+  border-radius: 26px 0px 0px 26px;
+}
+.app-nav .btn:last-child {
+  border-radius: 0px 26px 26px 0px;
+}
+.app-nav .btn:hover {
+  opacity: 0.95;
 }
 
 input.invalid {

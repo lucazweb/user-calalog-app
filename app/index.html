@@ -9,15 +9,23 @@
 </head>
 <body>
     <div id="messageComponent"></div>
-    <div class="app" id="root"> </div>
-    <script src="//unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
 
+    <h1 class="app-title">Catálogo de usuários</h1>
+    <div class="app" id="root"> </div>
+    <nav class="app-nav">
+        <a id="homeBtn" class="btn" href="/"> Cadastro </a>
+        <a id="listBtn" class="btn" href="/list"> Lista  </a>
+    </nav>    
+    <!-- Third party input masks -->
+    <script src="//unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
+    
+    <!-- Application -->
     <script type="text/javascript" src="js/controllers/MainController.js"></script>
-    <script src="js/views/View.js"></script>
     <script type="text/javascript" src="js/models/User.js"></script>
     <script type="text/javascript" src="js/models/UsersList.js"></script>
     <script type="text/javascript" src="js/models/Message.js"></script>
     <script type="text/javascript" src="js/services/UsersService.js"></script>
+    <script src="js/views/View.js"></script>
     <script type="text/javascript" src="js/views/UsersListView.js"></script>
     <script type="text/javascript" src="js/views/FormView.js"></script>
     <script type="text/javascript" src="js/views/MessageView.js"></script>
@@ -28,7 +36,7 @@
     <script type="text/javascript" src="js/components/InputPhoneComponent.js"></script>
     <script type="text/javascript" src="js/components/ButtonComponent.js"></script>
     
-
+    <!-- Application init -->
     <script type="text/javascript">
         let controller = new MainController();
         let pathname = window.location.pathname;

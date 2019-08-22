@@ -1,18 +1,41 @@
+// FONTS
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+// COLORS
 $cor-app-background: #f3f3f3;
 $cor-borda-default: #efeeed;
 $cor-placeholder-default: #efeeed;
 $cor-erro: #eb4a46;
+$cor-ativa: #069;
 $cor-botao-ativo:  #00c8b3;
 $cor-input-ativo: #333333;
 $background-botao-disabled: #f6f6f6;
 $cor-hover-item-list: #f6f6f6;
 $cor-botao-disabled: #dddcdc;
 $cor-branca: #FFFFFF;
+$cor-preta: #333;
+
+/** BREAKPOINTS */
+// Smartphones
+$mq-smartphones-portrait-landscape: "only screen and (min-device-width : 320px) and (max-device-width : 1024px)";
 
 h1, h2, h3, h4, span, p, a, label, small{
     font-family: 'Roboto', sans-serif;
+}
+
+.app-title{
+    text-align: center;
+    margin-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-default{
+    font-size: 1.1em;
+    border-bottom: 1px solid $cor-preta;
+    margin: 0 0 30px 0;
+    padding-top: 0;
+    padding-bottom: 4px;
 }
 
 html, body{
@@ -24,11 +47,15 @@ html, body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin: 100px auto;
+    margin: 20px auto 20px auto;
     width: 30%;
     border: 1px solid $cor-borda-default;
-    padding: 15px;
+    border-radius: 6px;
+    padding: 25px;
     background: $cor-branca;
+    @media #{$mq-smartphones-portrait-landscape} {
+        width: 70%;
+    }
 }
 
 //FORMS
@@ -96,7 +123,6 @@ button.btn{
     }
 }
 
-
 //LIST COMPONENT
 .list-component{
     display: flex;
@@ -147,6 +173,43 @@ button.btn{
     color: $cor-branca;
     font-family: 'Roboto', sans-serif;
 }
+
+// NAV
+.app-nav{
+    width: 450px;
+    margin: auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    .btn.active{
+        opacity: 1;
+    }
+    .btn{
+        cursor: pointer;
+        width: 50%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        text-decoration: none;
+        opacity: 0.8;
+        color: white;
+        background: $cor-ativa;
+        border:1px solid transparent;
+        font-size: 1.1em;
+        font-family: 'Roboto', sans-serif;
+        &:first-child{
+            border-radius: 26px 0px 0px 26px;
+        }
+        &:last-child{
+            border-radius: 0px 26px 26px 0px;
+        }
+        &:hover{
+            opacity: 0.95;
+        }
+    }    
+}
+
 
 // @@@@@@@ TEMP @@@@@@@
 input.invalid{

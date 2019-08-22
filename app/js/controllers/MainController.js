@@ -5,12 +5,16 @@ class MainController{
         this._messageView = new MessageView($('#messageComponent'));
         this._message = new Message();
         this._usersList = new UsersList();
-        
-        this._usersListView = new UsersListView($('#root'));
-        this._usersListView.update(this._usersList);
 
         this._usersService = new UsersService('https://private-21e8de-rafaellucio.apiary-mock.com/users');
         this._usersService.getUsers(err => console.log(err), res => this._usersList.saveUsers(res));
+
+        this._usersListView = new UsersListView($('#root'));
+        //this._usersListView.update(this._usersList);
+
+        this._homeBtn = $('#homeBtn');
+        this._listBtn = $('#listBtn');
+
     }
 
     addUser(event){
@@ -66,16 +70,16 @@ class MainController{
             case '/':
                 this._formView.update({});
                 this._initFormElements();
-                return 'Home view';
+                this._homeBtn.classList += ' active';
+                //this._listBtn.classList.remove('active');
+            break;
             case '/list/':
-                console.log('list view');
-                console.log(this._usersList.users);
+                this._listBtn.classList += ' active';
+                //this._homeBtn.classList.remove('active');
                 this._usersService.getUsers(err => console.log(err), res => {
                     this._usersList.saveUsers(res);
                     this._usersListView.update(this._usersList);
                 });
-                //this._usersListView.update(this._usersList);
-                return 'List view'
             default:
                 return '404'
         }

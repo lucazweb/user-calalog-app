@@ -6,11 +6,10 @@ class UsersListView{
     template(model){ 
         return  `
             <div id="usersList" class="list-component">
-                <h2> Users lists </h2>
+                <h2 class="title-default"> Lista de usuários </h2>
                 <ul>
                     ${
                         model.users.map(user => {
-                            console.log(user);
                             return `
                                     <li>
                                         <span>${user.name}</span>
