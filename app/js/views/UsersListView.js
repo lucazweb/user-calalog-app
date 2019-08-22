@@ -12,6 +12,7 @@ class UsersListView{
                 <ul>
                     ${
                         model.users.map(user => {
+                            console.log(user);
                             return `
                                     <li>
                                         <span>${user.name}</span>

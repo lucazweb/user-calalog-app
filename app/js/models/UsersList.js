@@ -8,15 +8,24 @@ class UsersList{
     }
 
     saveUser(user){
-        this._usersList.push(user);
+        this._usersList.push({
+            name: user.name,
+            cpf: user.cpf,
+            phone: user.phone,
+            email: user.email
+        });
         this._persistListData();
     }
 
     saveUsers(arr){
         arr.forEach( user => {
             if(this._usersList.filter(item => item.cpf === user.cpf).length === 0)
-                this.saveUser(user);
-            
+                this.saveUser({
+                    name: user.name,
+                    cpf: user.cpf,
+                    phone: user.phone,
+                    email: user.email
+                });
         });
         this._persistListData();
     }

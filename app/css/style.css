@@ -59,7 +59,8 @@ html, body {
   color: #eb4a46;
   margin-top: 5px;
 }
-.default-form .form-group button {
+
+button.btn {
   cursor: pointer;
   border-radius: 25px;
   height: 50px;
@@ -73,7 +74,7 @@ html, body {
   align-items: center;
   transition: opacity ease 0.5s;
 }
-.default-form .form-group button:hover {
+button.btn:hover {
   opacity: 0.7;
 }
 
@@ -104,6 +105,20 @@ html, body {
 }
 .list-component ul li span {
   font-size: 0.8em;
+}
+
+.message-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00c8b3;
+  width: 100%;
+  height: 40px;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
 }
 
 input.invalid {
