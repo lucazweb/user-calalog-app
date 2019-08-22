@@ -21,4 +21,8 @@ class CPFHelper{
         if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
         return true;
     }
+
+    static HandleCPFStringFormat(string){
+      return string.replace('.', '').replace('.', '').replace('-', '');
+    }
 }
