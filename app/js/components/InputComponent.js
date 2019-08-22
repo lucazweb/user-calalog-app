@@ -7,6 +7,8 @@ class InputComponent{
         this._input.setAttribute('type', type);
         if(placeholder) this._input.setAttribute('placeholder', placeholder);
         if(className) this._input.className += className;
+        this._input.setAttribute('autocomplete', 'off');
+
         this._input.addEventListener('keyup', e => this._handleValidation(e));
 
         this._parentElement = document.querySelector(`#${parentId}`);
