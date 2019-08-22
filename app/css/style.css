@@ -70,7 +70,12 @@ html, body {
   padding-bottom: 10px;
 }
 .default-form .form-group input::placeholder {
-  color: #efeeed;
+  color: #b3b0ae;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+  .default-form .form-group input::placeholder {
+    font-size: 0.8em;
+  }
 }
 .default-form .form-group input:focus {
   color: #333333;

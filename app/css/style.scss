@@ -5,7 +5,7 @@
 // COLORS
 $cor-app-background: #f3f3f3;
 $cor-borda-default: #efeeed;
-$cor-placeholder-default: #efeeed;
+$cor-placeholder-default: #b3b0ae;
 $cor-erro: #eb4a46;
 $cor-nav-ativa: #7ea5a1;
 $cor-botao-ativo:  #00c8b3;
@@ -87,6 +87,10 @@ html, body{
             padding-bottom: 10px;
             &::placeholder{
                 color: $cor-placeholder-default;
+                @media #{$mq-smartphones-portrait-landscape} {
+                    font-size: 0.8em;
+                }
+                
             }
 
             &:focus{
