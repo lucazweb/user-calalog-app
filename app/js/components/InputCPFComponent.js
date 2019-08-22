@@ -14,7 +14,6 @@ class InputCPFComponent extends InputComponent{
 
     /** CPF Input validation style and message */
     _handleValidation(e){
-
         if(!CPFHelper.VerifyCPF(CPFHelper.HandleCPFStringFormat(e.target.value))){
             this._input.className += ' invalid'
             this._parentElement.append(this._validatorLabel);
