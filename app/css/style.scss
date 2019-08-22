@@ -7,7 +7,7 @@ $cor-app-background: #f3f3f3;
 $cor-borda-default: #efeeed;
 $cor-placeholder-default: #efeeed;
 $cor-erro: #eb4a46;
-$cor-ativa: #069;
+$cor-nav-ativa: #7ea5a1;
 $cor-botao-ativo:  #00c8b3;
 $cor-input-ativo: #333333;
 $background-botao-disabled: #f6f6f6;
@@ -54,7 +54,8 @@ html, body{
     padding: 25px;
     background: $cor-branca;
     @media #{$mq-smartphones-portrait-landscape} {
-        width: 70%;
+        width: 80%;
+        margin: auto;
     }
 }
 
@@ -181,6 +182,10 @@ button.btn{
     display:flex;
     justify-content: space-between;
     align-items: center;
+    @media #{$mq-smartphones-portrait-landscape} {
+        width: 90%;
+        margin-top: 30px;
+    }
     .btn.active{
         opacity: 1;
     }
@@ -194,7 +199,7 @@ button.btn{
         text-decoration: none;
         opacity: 0.8;
         color: white;
-        background: $cor-ativa;
+        background: $cor-nav-ativa;
         border:1px solid transparent;
         font-size: 1.1em;
         font-family: 'Roboto', sans-serif;
@@ -209,7 +214,6 @@ button.btn{
         }
     }    
 }
-
 
 // @@@@@@@ TEMP @@@@@@@
 input.invalid{

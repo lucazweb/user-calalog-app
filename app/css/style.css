@@ -37,7 +37,8 @@ html, body {
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
   .app {
-    width: 70%;
+    width: 80%;
+    margin: auto;
   }
 }
 
@@ -158,6 +159,12 @@ button.btn:hover {
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+  .app-nav {
+    width: 90%;
+    margin-top: 30px;
+  }
+}
 .app-nav .btn.active {
   opacity: 1;
 }
@@ -171,7 +178,7 @@ button.btn:hover {
   text-decoration: none;
   opacity: 0.8;
   color: white;
-  background: #069;
+  background: #7ea5a1;
   border: 1px solid transparent;
   font-size: 1.1em;
   font-family: "Roboto", sans-serif;
