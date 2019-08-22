@@ -1,7 +1,7 @@
 class MessageView extends View{
 
     template(model){
-        return ` <div class="message-component"> ${model.text} </div>`;
+        return ` <div class="message-component ${model.isError ? 'error-message' : ''}"> ${model.text} </div>`;
     }
 
     update(model){

@@ -15,10 +15,19 @@ class MainController{
 
     addUser(event){
         event.preventDefault();
-        this._usersList.saveUser(this._createUser());
-        this._usersListView.update(this._usersList);
-        this._message.text = 'Usuário adicionado com sucesso';
-        this._messageView.update(this._message);
+
+        console.log(event.target.cpf.value);
+        
+        if(CPFHelper.VerifyCPF(CPFHelper.HandleCPFStringFormat(event.target.cpf.value))){
+            this._usersList.saveUser(this._createUser());
+            this._message.text = 'Usuário adicionado com sucesso';
+            this._messageView.update(this._message);
+            this._clearForm();
+        } else {
+            this._message.text = 'Alguns dados precisam ser inseridos corretamente..';
+            this._message.isError = true;
+            this._messageView.update(this._message);
+        }
     }
 
     _createUser(){

@@ -3,9 +3,7 @@ class UsersListView{
         this._element = element;
     }
 
-
-    template(model){
- 
+    template(model){ 
         return  `
             <div id="usersList" class="list-component">
                 <h2> Users lists </h2>

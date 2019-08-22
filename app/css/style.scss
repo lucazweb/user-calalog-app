@@ -7,6 +7,7 @@ $cor-erro: #eb4a46;
 $cor-botao-ativo:  #00c8b3;
 $cor-input-ativo: #333333;
 $background-botao-disabled: #f6f6f6;
+$cor-hover-item-list: #f6f6f6;
 $cor-botao-disabled: #dddcdc;
 $cor-branca: #FFFFFF;
 
@@ -77,6 +78,7 @@ html, body{
 }
 
 button.btn{
+    outline: none;
     cursor: pointer;
     border-radius: 25px;
     height: 50px;
@@ -111,8 +113,11 @@ button.btn{
             display:flex;
             flex-direction: column;
             border-bottom: 1px solid $cor-borda-default;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding: 14px 10px;
+            &:hover{
+                background: $cor-hover-item-list;
+            }
+
             span:first-child{
                 font-size: 1em;
                 font-family: 'Roboto', sans-serif;
@@ -120,12 +125,15 @@ button.btn{
             }
             span{
                 font-size: 0.8em;
+                margin-bottom: 2px;
             }
         }
     }
 }
 
-
+.message-component.error-message{
+    background: $cor-erro;
+}
 .message-component{
     display: flex;
     justify-content: center;

@@ -61,6 +61,7 @@ html, body {
 }
 
 button.btn {
+  outline: none;
   cursor: pointer;
   border-radius: 25px;
   height: 50px;
@@ -95,8 +96,10 @@ button.btn:hover {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #efeeed;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 14px 10px;
+}
+.list-component ul li:hover {
+  background: #f6f6f6;
 }
 .list-component ul li span:first-child {
   font-size: 1em;
@@ -105,6 +108,11 @@ button.btn:hover {
 }
 .list-component ul li span {
   font-size: 0.8em;
+  margin-bottom: 2px;
+}
+
+.message-component.error-message {
+  background: #eb4a46;
 }
 
 .message-component {
