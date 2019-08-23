@@ -181,7 +181,7 @@ button.btn:hover {
 
 .app-nav {
   width: 450px;
-  margin: auto;
+  margin: auto auto 15px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;

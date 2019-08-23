@@ -21,6 +21,7 @@ $cor-preta: #333;
 // Smartphones
 $mq-smartphones-portrait-landscape: "only screen and (min-device-width : 320px) and (max-device-width : 1024px)";
 
+
 h1, h2, h3, h4, span, p, a, label, small{
     font-family: 'Roboto', sans-serif;
 }
@@ -58,6 +59,7 @@ html, body{
         width: 80%;
         margin: auto;
     }
+
 }
 
 //FORMS
@@ -207,7 +209,7 @@ button.btn{
 // NAV
 .app-nav{
     width: 450px;
-    margin: auto;
+    margin: auto auto 15px auto;
     display:flex;
     justify-content: space-between;
     align-items: center;
