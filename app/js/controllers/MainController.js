@@ -48,6 +48,12 @@ class MainController{
         );
     }
 
+    deleteUser(e){
+        let index = e.target.id.replace('user', '');
+        this._usersList.deleteUser(index);
+        this._usersListView.update(this._usersList);
+    }
+
     _loading(flag){
         let button = document.querySelector('#btnComponent').firstElementChild;
         let loading = document.createElement('img');
@@ -86,13 +92,17 @@ class MainController{
                 this._homeBtn.classList += ' active';
                 //this._listBtn.classList.remove('active');
             break;
+            
             case '/list/':
                 this._listBtn.classList += ' active';
-                //this._homeBtn.classList.remove('active');
+                
                 this._usersService.getUsers(err => console.log(err), res => {
                     this._usersList.saveUsers(res);
                     this._usersListView.update(this._usersList);
+                    let list = document.querySelector('#usersList');
+                    list.querySelectorAll('button').forEach(delButton => delButton.addEventListener('click', e => this.deleteUser(e)));
                 });
+
             default:
                 return '404'
         }

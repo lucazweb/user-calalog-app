@@ -125,6 +125,7 @@ button.btn:hover {
   flex-direction: column;
   border-bottom: 1px solid #efeeed;
   padding: 14px 10px;
+  position: relative;
 }
 .list-component ul li:hover {
   background: #f6f6f6;
@@ -137,6 +138,27 @@ button.btn:hover {
 .list-component ul li span {
   font-size: 0.8em;
   margin-bottom: 2px;
+}
+.list-component ul li button {
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font-size: 1em;
+  right: 20px;
+  top: 40%;
+  border: none;
+  background: #dddcdc;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+.list-component ul li button:hover {
+  background: #990000;
 }
 
 .message-component.error-message {

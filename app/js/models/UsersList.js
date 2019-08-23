@@ -35,6 +35,11 @@ class UsersList{
         this._persistListData();
     }
 
+    deleteUser(index){
+        this._usersList.splice(index, 1);
+        this._persistListData();
+    }
+
     _persistListData(){
         localStorage.setItem('usersList', JSON.stringify(this._usersList));
     }

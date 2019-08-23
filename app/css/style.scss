@@ -7,6 +7,7 @@ $cor-app-background: #f3f3f3;
 $cor-borda-default: #efeeed;
 $cor-placeholder-default: #b3b0ae;
 $cor-erro: #eb4a46;
+$cor-delete: #990000;
 $cor-nav-ativa: #7ea5a1;
 $cor-botao-ativo:  #00c8b3;
 $cor-input-ativo: #333333;
@@ -145,6 +146,7 @@ button.btn{
             flex-direction: column;
             border-bottom: 1px solid $cor-borda-default;
             padding: 14px 10px;
+            position: relative;
             &:hover{
                 background: $cor-hover-item-list;
             }
@@ -158,6 +160,29 @@ button.btn{
                 font-size: 0.8em;
                 margin-bottom: 2px;
             }
+
+            button{
+                outline: none;
+                cursor: pointer;
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                font-size: 1em;
+                right: 20px;
+                top: 40%;
+                border: none;
+                background: $cor-botao-disabled;
+                color: $cor-branca;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Roboto', sans-serif;
+                &:hover{
+                    background: $cor-delete;
+                }
+            }
+
         }
     }
 }

@@ -9,13 +9,14 @@ class UsersListView{
                 <h2 class="title-default"> Lista de usuários </h2>
                 <ul>
                     ${
-                        model.users.map(user => {
+                        model.users.map((user, index) => {
                             return `
                                     <li>
                                         <span>${user.name}</span>
                                         <span>${user.cpf}</span>
                                         <span>${user.phone}</span>
                                         <span>${user.email}</span>
+                                        <button id="user${index}" class="delete-user"> x </button>
                                     </li>                            
                                     `
                         }).join('')
