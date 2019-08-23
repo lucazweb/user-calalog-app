@@ -50,7 +50,16 @@ class MainController{
 
     _loading(flag){
         let button = document.querySelector('#btnComponent').firstElementChild;
-        flag ? button.innerHTML = "Loading" : button.innerHTML = "Cadastrar";
+        let loading = document.createElement('img');
+        loading.setAttribute('src', 'assets/loading_icon.svg');
+        loading.setAttribute('id', 'loading');
+        
+        if(flag){
+            button.innerHTML = '';
+            button.appendChild(loading);
+        } else {
+            button.innerHTML = "Cadastrar"
+        }
     }
 
     _clearForm(){
