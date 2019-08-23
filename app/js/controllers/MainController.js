@@ -8,7 +8,7 @@ class MainController{
 
         this._usersService = new UsersService('https://private-21e8de-rafaellucio.apiary-mock.com/users');
         this._usersService.getUsers(err => console.log(err), res => this._usersList.saveUsers(res));
-
+        
         this._usersListView = new UsersListView($('#root'));
         //this._usersListView.update(this._usersList);
 
@@ -19,12 +19,17 @@ class MainController{
 
     addUser(event){
         event.preventDefault();
-
-        console.log(event.target.cpf.value);
         
         if(CPFHelper.VerifyCPF(CPFHelper.HandleCPFStringFormat(event.target.cpf.value))){
-            this._usersList.saveUser(this._createUser());
-            this._message.text = 'Usuário adicionado com sucesso';
+            this._loading(true);
+            setTimeout(() => this._loading(false), 2000);
+
+            let self = this;
+            this._usersList.saveUser(this._createUser(), function(err, msg){
+                self._message.text = msg;
+                err ? self._message.isError = true : self._message.isError = false;
+            });
+            
             this._messageView.update(this._message);
             this._clearForm();
         } else {
@@ -41,6 +46,11 @@ class MainController{
             this._inputPhone.value,
             this._inputEmail.value
         );
+    }
+
+    _loading(flag){
+        let button = document.querySelector('#btnComponent').firstElementChild;
+        flag ? button.innerHTML = "Loading" : button.innerHTML = "Cadastrar";
     }
 
     _clearForm(){

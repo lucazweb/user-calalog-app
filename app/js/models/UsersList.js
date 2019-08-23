@@ -7,14 +7,19 @@ class UsersList{
         return [].concat(this._usersList);
     }
 
-    saveUser(user){
-        this._usersList.push({
-            name: user.name,
-            cpf: user.cpf,
-            phone: user.phone,
-            email: user.email
-        });
-        this._persistListData();
+    saveUser(user, cb = null){
+        if(this._usersList.filter(item => item.cpf === user.cpf).length === 0){
+            this._usersList.push({
+                name: user.name,
+                cpf: user.cpf,
+                phone: user.phone,
+                email: user.email
+            });
+            if(cb) cb(false, 'Usuário registrado com sucesso.');
+            this._persistListData();
+        } else {
+            if(cb) cb(true, 'Usuário já existe na lista');
+        }
     }
 
     saveUsers(arr){
