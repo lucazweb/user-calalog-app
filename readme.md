@@ -6,5 +6,5 @@
 
 #### About this project
 - A simple vanila js application developed in MVC Pattern
-- ES6 features
+- ES6 features :tada:
 - In progress
