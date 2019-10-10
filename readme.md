@@ -1,8 +1,10 @@
-# Catálogo de usuários
+# User Catalog, a Vanila JS Application
 
-#### Instalação
-  - `npm install` na raiz do projeto
-  - Executar `npm start`, a aplicacão vai ser iniciada na porta 3000
+#### Install
+  - `npm install` or `yarn` in project root folder
+  - `npm start` or `yarn start`
 
-#### Sobre a aplicação
-- Para o desenvolvimento da aplicacão foi feito o uso do padrão MVC com uso de algumas features do ES6.
+#### About this project
+- A simple vanila js application developed in MVC Pattern
+- ES6 features
+- In progress
